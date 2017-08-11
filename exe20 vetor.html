@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercio 20</title>
+	<script>
+		function inicia(){
+			var A = [];
+			var i;
+			var cont=0;
+			for(i=0;i<10;i++){
+				A[i] = parseInt(prompt("Informe um número"));
+				
+				if(A[i] > 0){
+					cont =cont + ","+ A[i];
+				}
+			}
+			document.getElementById("resultado").innerHTML="Somente números positivos: "+cont;
+		}
+	</script>
+</head>
+<body>
+<button onclick="inicia()">Iniciar</button>
+<h3 id="resultado"> </h3>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercicio 12</title>
+	<script>
+		function inicia(){
+			var A = new Array();
+			var i; var cont=0;
+			for(i=0;i<5;i++){
+				A[i] = parseInt(prompt("Digite um número"));
+				if(A[i] >= 0){
+					cont = cont + A[i];
+				}
+			}
+			document.getElementById("resposta1").innerHTML ="Digite o 1° número: "+A[0] + "<br/>";
+
+			document.getElementById("resposta2").innerHTML ="Digite o 2° número: "+A[1] + "<br/>";
+
+			document.getElementById("resposta3").innerHTML ="Digite o 3° número: "+A[2] + "<br/>";
+
+			document.getElementById("resposta4").innerHTML ="Digite o 4° número: "+A[3] + "<br/>";
+
+			document.getElementById("resposta5").innerHTML ="Digite o 5° número: "+A[4] + "<br/>";			
+			
+			document.getElementById("resposta").innerHTML ="Os números digitados foram: "+A[0]+"+"+A[1]+"+"+A[2]+"+"+A[3]+"+"+A[4]+"="+cont;
+		}
+	</script>
+</head>
+<body>
+<button onclick="inicia()">Iniciar</button>
+<h3 id="resposta1"> </h3>
+<h3 id="resposta2"> </h3>
+<h3 id="resposta3"> </h3>
+<h3 id="resposta4"> </h3>
+<h3 id="resposta5"> </h3>
+<h3 id="resposta"> </h3>
+</body>
+</html>

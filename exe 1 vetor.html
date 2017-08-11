@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			function inicia(){
+				var vetor = new Array();
+				var i;
+				var pares = "Pares: <br/>";var quantpares = 0;
+				var impares = "Impares: <br/>";var quantimpares = 0;
+				//entrada de dados
+				for(i = 0;i < 6;i++){
+					vetor [i] = parseInt(prompt("Informe um elemento: "));
+				}
+				// calcula impares,pares e quant
+				for (i = 0;i < 6;i++){
+					if(vetor [i] % 2 == 0){//é par
+						pares = pares + " " + vetor[i];
+						quantpares++;
+					}
+					else{
+						impares = impares + " " + vetor[i];
+						quantimpares++;
+					}
+				}
+				document.getElementById("pares").innerHTML = pares;
+				document.getElementById("quantpares").innerHTML = quantpares;
+				document.getElementById("impares").innerHTML = impares;
+				document.getElementById("quantimpares").innerHTML = quantimpares;
+			}
+		</script>
+	</head>
+	<body>
+	<button onclick="inicia()"> Iniciar pograma </button>
+	<h3 id="pares"> </h3>
+	<h3 id="quantpares"> </h3>
+	<h3 id="impares"> </h3>
+	<h3 id="quantimpares"> </h3>
+	</body>
+</html>

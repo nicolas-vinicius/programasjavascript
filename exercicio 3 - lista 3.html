@@ -1,0 +1,49 @@
+<html>
+   <head>
+        <title> exercicio 3 - lista 3 </title>
+		<script>
+		     function inicia(){
+			       var vetorCodigo = new Array();
+				   var vetorQtde = new Array();
+				   var i;
+				   var codCliente, codProduto, qtdeComprada;
+				   // entrada de dados
+				  for(i=0; i<10;i++){
+				       vetorCodigo[i] = parseInt(prompt("Informe um código: "));
+					   vetorQtde[i] = parseInt(prompt("informe uma quantidade"));
+				  }
+				  // processamento
+				  codCliente = parseInt(prompt("informe o codigo do cliente"));
+				  while (codCliente != 0){
+				          codProduto = parseInt(prompt("informe codigo para compra"));
+						  // procura o codigo em vetorCodigo
+						  for(i=0;i<10;i++){
+						        if (codProduto == vetorCodigo[i]){ //achou
+								//i é a posição do produto da compra
+								break; // para de procurar
+							}
+						  }
+					if (i==10){ //nao achou
+					      alert("produto não encontrado");
+					}
+					else {
+					   qtdeComprada = parseInt(prompt("Informe qtde paa compra"));
+					   if(qtdeComprada <= vetorQtde[i]){ //pode comprar
+					      vetorQtde[i] -= qtdeComprada; // i é a posição do produto
+						  alert("compra com sucesso");
+					   }
+					  else{
+					     alert("sem estoque suficiente");
+					  }
+					}
+					codCliente = parseInt(prompt("informe o codigo do cliente. Digite 0 para encerrar"));
+				  }
+			      alert(vetorCodigo);
+				  alert(vetorQtde);
+			 }
+		</script>
+   </head>
+      <body>
+	  <button onclick="inicia()"> Iniciar Programa </button>
+	  </body>
+</html>

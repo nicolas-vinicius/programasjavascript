@@ -1,0 +1,33 @@
+<html>
+   <head>
+        <title> exercicio 21 - lista 3 </title>
+		<script>
+		     function inicia(){
+			       var vetornumero = new Array();
+				   var i;
+				   var nulo = 0 ; 
+				   // entrada de dados
+				  for(i=0; i<10;i++){
+				       vetornumero[i] = parseInt(prompt("digite um numero: "));
+				  }
+				  for(i=0;i<10;i++){
+				     if (vetornumero[i] < 0){
+					     negativo++;
+					 }
+					 if (vetornumero[i]>= 0){
+					    positivo = positivo + vetornumero[i];
+					 }
+				  
+				  }
+				document.getElementById("negativo").innerHTML = " a quantidade de numeros negativos é:" + negativo;
+				document.getElementById("positivo").innerHTML = "a soma dos numeros positivos é:" + positivo;
+				  
+       }		  
+		</script>
+   </head>
+     	<body>
+	          <button onclick="inicia()"> Iniciar </button>
+	          <h2 id="negativo"> </h2>
+	          <h2 id="positivo"> </h2>
+	         </body>
+</html>

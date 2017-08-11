@@ -1,0 +1,36 @@
+<html>
+   <head>
+        <title> exercicio 13 - lista 3 </title>
+		<script>
+		     function inicia(){
+			       var nomes = new Array();
+				   var notas = new Array();
+				   var i;
+				  var media; var acm = 0; 
+				   // entrada de dados
+				  for(i=1; i<9;i++){
+				       nomes[i]=prompt("Informe o nome do " + i + "° aluno");
+				       notas[i]=parseFloat(prompt("Informe a nota do aluno: " + nomes[i]));
+					   
+				 }
+				  for(i=1; i<8;i++){
+				    document.getElementById("i").innerHTML = nomes[i] +" :" + notas[i];
+				     }				 
+				
+				for(i=1; i<8;i++){
+				 acm = acm + notas[i];
+				 }
+				 media = acm / 8
+				 document.getElementById("media").innerHTML = "media da turma :" + media;
+				 document.getElementById("relatorio").innerHTML = " RELATORIO DAS NOTAS ";
+   }	   
+		</script>
+   </head>
+     	<body>
+	          <button onclick="inicia()"> Iniciar </button>
+			  <h3 id="relatorio"> </h3>
+	          <h2 id="i"> </h2>
+			  <h2 id="media"> </h2>
+	         
+	</body>
+</html>

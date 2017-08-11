@@ -1,0 +1,33 @@
+<html>
+    <head>
+	      <title> exercicio 23 - lista 3 </title>
+		<script>
+		   function subtrai(){
+		   var A = [];
+		   var B = [];
+		   var C = [];
+		   var i;
+		   //entrada de dados de A
+		 for (i=0; i<5;i++){
+		    A[i] = parseInt(prompt("informe um elemento do vetor A"));
+		 }
+		   //entrada de dados de B
+	     for (i=0; i<5; i++){
+		    B[i] = parseInt(prompt("informe um elemento do vetor B"));
+		 }
+		   //construir o vetor C
+		 for (i=0;i<n;i++){
+		    C[i] = B[n-1-i] - A[i];
+		 }
+		 // mostrar resultado de pares
+		 for (i=0; i<5; i++){
+		    document.getElementById("saida").innerHTML = document.getElementById("saida").innerHTML + "<br/>" + C[i];
+		 }
+	}
+        </script>		
+	</head>
+	<body>
+	    <button onclick="subtrai()"> iniciar o programa </button>
+		<br/>Resultado: <h2 id="saida"> </h2>
+	</body>
+</html>

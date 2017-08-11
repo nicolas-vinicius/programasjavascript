@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			function exe6(){
+				var vendas = new Array();
+				var comissao = new Array();
+				var nomes = new Array();
+				var i;//índice dos vetores
+				var receber;
+				var soma = 0;
+				var maiorReceber,menorReceber;
+				var nomeMaior , nomeMenor;
+				//entrada de dados
+				for (i=0;i<10;i++){
+					nomes[i]=prompt("Informe o nome do vendedor");
+					vendas[i]=parseFloat(prompt("Informe o valor das vendas do vendedor: " + nomes[i]));
+					comissao[i]=parseFloat(prompt("Informe o valor da comissão do vendedor: " + nomes[i]));
+				}
+				//processamento
+				menorReceber = maiorReceber = (vendas[0]*comissao[0]/100);
+				for (i=0;i<10;i++){
+					//valores a receber
+					receber = (vendas[i] * comissao[i])/100;
+					document.getElementById("relatorio").innerHTML = document.getElementById("relatorio").innerHTML + "<br/>" + nomes[i] + " - " + receber;
+					//soma das vendas
+					soma = soma + vendas[i];
+					//calcula maior a receber
+					if (receber > maiorReceber){
+						maiorReceber = receber;
+						nomeMaior = nomes[i];
+					}
+					//calcula menor a receber
+					if (receber < menorReceber ){
+						menorReceber = receber;
+						nomeMenor = nomes[i];
+					}
+				}
+				//mostra resultado
+				document.getElementById("soma").innerHTML = soma;
+				document.getElementById("maior").innerHTML = maiorReceber + " - " + nomeMaior;
+				document.getElementById("menor").innerHTML = menorReceber + " - " + nomeMenor;
+			}
+		</script>
+	</head>
+	<body>
+	<button onclick="exe6()"> Iniciar </button>
+	<h2 id="relatorio"> </h2>
+	<h2 id="soma"> </h2>
+	<h2 id="maior"> </h2>
+	<h2 id="menor"> </h2>
+	</body>
+</html>

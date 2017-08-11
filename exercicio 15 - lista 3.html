@@ -1,0 +1,35 @@
+<html>
+   <head>
+        <title> exercicio 15 - lista 3 </title>
+		<script>
+		     function inicia(){
+			       var cliente = new Array();
+				   var locacao = new Array();
+				   var i;
+				   var qtde = 0;
+				  
+				   // entrada de dados
+				  for(i=0; i<8;i++){
+				     cliente[i]=prompt("Informe o nome do cliente");
+					 locacao[i] = parseInt(prompt("informe uma quantidade de dvd locados pelo cliente " + cliente[i]));
+					  }
+					  for(i=0; i<8; i++){
+						  if ( locacao[i] >= 10){
+						   qtde = locacao[i]/10
+						  alert("O(A) cliente " + cliente[i] +" tem direito a "+ qtde + " dvds gratis para locação.")
+						  }
+						  else{
+						  alert("O(A) cliente " + cliente[i]+ " nao tem direito a locacao gratis")
+						  }
+						  
+						  
+	}
+}	
+	
+		</script>
+   </head>
+      <body>
+	  <button onclick="inicia()"> Iniciar Programa </button>
+	  
+	  </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script>
+			function separa(){
+				var A = new Array();
+				var P = [];
+				var I = [];
+				var i;
+				// entrada de dados
+				for (i=0;i<10;i++){
+					A[i] = parseInt(prompt("Informe um elemento do vetor"));
+				}
+				// construir os vetores B e C
+				for(i=0;i<10;i++){
+					if (A[i] % 2 == 0) {
+						P.push(A[i]);
+					}
+					else{
+						I.push(A[i]);
+					}
+				}
+				// mostra o resultado de Pares
+				for (var i = 0; i < P.length; i++) {
+					document.getElementById("saidaP").innerHTML = document.getElementById("saidaP").innerHTML + "<br/>" + P[i];
+				}
+				// mostra o resultado de Impares
+				for (var i = 0; i < I.length; i++) {
+					document.getElementById("saidaI").innerHTML = document.getElementById("saidaI").innerHTML + "<br/>" + I[i];
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="separa()"> Iniciar </button>
+		<br/> Pares: <h2 id="saidaP"></h2>
+		<br/> Ímpares: <h2 id="saidaI"></h2>
+	</body>
+</html>
